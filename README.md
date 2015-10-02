@@ -1,4 +1,4 @@
-# bus-tracker-leaflet
+# Bus-Tracker-Frontend
 > This temporary repository will be the website frontend of the bus tracker. Everything will eventually be hosted by the school. 
 
 ### Info
@@ -16,5 +16,5 @@
 [1]:https://nodejs.org
 
 ----
-Copyright (c) 2015 MXProgrammingClub and its members
+Copyright (c) 2015 MXProgrammingClub and its members  
 Licensed under the BSD 3 Clause
