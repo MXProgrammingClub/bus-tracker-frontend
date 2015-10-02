@@ -1,0 +1,19 @@
+body {
+	height: 100%;
+	width: 100%;
+}
+
+p.normal, h1.normal, h2.normal, h3.normal,
+h4.normal, h5.normal, h6.normal {
+	font-style: normal;
+}
+
+p.italic, h1.italic, h2.italic, h3.italic,
+h4.italic, h5.italic, h6.italic {
+	font-style: italic;
+}
+
+p.oblique, h1.oblique, h2.oblique, h3.oblique,
+h4.oblique, h5.oblique, h6.oblique {
+	font-style: oblique;
+}

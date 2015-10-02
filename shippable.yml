@@ -1,0 +1,15 @@
+# language setting
+language: node_js
+
+node_js:
+  - "0.10"
+  
+branches:
+  only:
+    - master
+    
+env:
+  global:
+    - APP_NAME=bus-tracker
+    
+script: ":"
