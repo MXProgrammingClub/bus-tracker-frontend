@@ -3,14 +3,15 @@
 (function () {
 	require.config({
 		paths: {
-			"leaflet": "../bower_components/leaflet/dist/leaflet"
+			leaflet: "../bower_components/leaflet/dist/leaflet", 
+			jquery: '../bower_components/jquery/dist/jquery.min'
 		},
 		enforceDefine: true
 	});
 })();
 
 define(function (require) {
-	var $ = require('jquery-private');
+	var $ = require('jquery');
 	console.log('Success!');
 	
 	require(['leaflet', 'map', 'coordinates'], function (L, map, coordinates) {
