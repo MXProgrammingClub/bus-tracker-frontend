@@ -2,7 +2,7 @@
   "name": "bus-tracker-frontend",
   "version": "0.0.1",
   "scripts": {
-	"prepublish": "cd site/js && npm install",
+	"preinstall": "cd site/js && npm install",
 	"start": "cd site && node index.js"
   },
   "dependencies": { "mime": "~1.2.7" },
