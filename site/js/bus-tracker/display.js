@@ -20,16 +20,5 @@ define(['leaflet', 'map', 'markers'], function (L, map, markers) {
 	markers.dd.addTo(map);
 	markers.bus.addTo(map);
 
-	/**
-	 * Simulates mouse clicking on the map
-	 * A popup will show the coordinates of the click
-	 */
-	function onMapClick (e) {
-		L.popup()
-			.setLatLng(e.latlng)
-			.setContent("You clicked the map at " + e.latlng)
-			.openOn(map);
-	}
 
-	map.on('click', onMapClick);
 });
