@@ -19,6 +19,4 @@ define(['leaflet', 'map', 'markers'], function (L, map, markers) {
 	markers.mx.addTo(map);
 	markers.dd.addTo(map);
 	markers.bus.addTo(map);
-
-
 });
