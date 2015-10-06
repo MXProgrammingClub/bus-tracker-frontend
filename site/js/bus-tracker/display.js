@@ -1,4 +1,3 @@
-// jshint unused:false
 "use strict";
 
 define(['leaflet', 'map', 'markers'], function (L, map, markers) {
@@ -18,9 +17,7 @@ define(['leaflet', 'map', 'markers'], function (L, map, markers) {
 
 	// Adds the markers to the maps
 	markers.mx.addTo(map);
-
 	markers.dd.addTo(map);
-
 	markers.bus.addTo(map);
 
 	/**

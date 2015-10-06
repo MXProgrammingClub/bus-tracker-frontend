@@ -2,23 +2,24 @@
 
 (function () {
 	require.config({
+		// defines paths for bower dependencies
 		paths: {
 			leaflet: "../bower_components/leaflet/dist/leaflet", 
 			jquery: "../bower_components/jquery/dist/jquery.min"
 		},
+		// requires `define` call in main
 		enforceDefine: true
 	});
 })();
 
 define(function (require) {
-	require('jquery'); // makes sure jQuery loads
-	require('display'); // inits map and icons
+	// makes sure jQuery loads
+	require('jquery');
 	
-	$(function () {
-		var timer = setInterval(function () {
-			require('update');
-			console.log('Updated');
-		}, 5000);
-	});
+	// inits map and icons
+	require('display'); 
+	
+	// updates the bus location for every 5 seconds
+	setInterval(require('update'), 5000); 
 });
 
