@@ -6,6 +6,7 @@ body {
 #header {
 	width: 100%;
 	color: #E0E0E0;
+	margin: auto;
 }
 
 p.normal, h1.normal, h2.normal, h3.normal,
