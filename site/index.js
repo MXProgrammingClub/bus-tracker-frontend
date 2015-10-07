@@ -30,6 +30,7 @@ function serverWorking (response, absPath) {
 var server = http.createServer(function (request, response) {
 	var filePath;
 	if (request.url === '/') filePath = 'index.html';
+	else if (request.url.indexOf('/bus-tracker') === 0) filePath = 'bus-tracker.html';
 	else filePath = request.url;
 	
 	serverWorking(response, "./" + filePath);
