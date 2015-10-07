@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="/js/bower_components/leaflet/dist/leaflet.css" />
 	<script async defer data-main="/js/bus-tracker/main" src="/js/bower_components/requirejs/require.js"></script>
 	<script>
-	// I hate hackers
+	// Delete global variable `L`
 	var timer = setInterval(function () {
 		if (window.L) {
 			clearInterval(timer);
@@ -22,7 +22,7 @@
 </head>
 <body>
 	<div id="header"><h3>Middlesex Bus Tracker</h3></div>
-	<div id="map" style="width: 300px; height: 500px"></div>
+	<div id="map"></div>
 </body>
 </html>
 

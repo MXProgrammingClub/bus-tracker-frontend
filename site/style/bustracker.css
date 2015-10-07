@@ -9,6 +9,31 @@ body {
 	margin: auto;
 }
 
+#map {
+	width: 720px;
+	height: 480px;
+	margin: 0 auto; /* center div */
+	margin-top: 50px;
+}
+
+/* iPhone portrait */
+@media only screen and (max-device-width: 480px) and (orientation: portrait) {
+	#map {
+		width: 300px;
+		height: 400px;
+		margin-top: 0px;
+	}
+}
+
+/* iPhone landscape */
+@media only screen and (max-device-width: 480px) and (orientation: landscape) {
+	#map {
+		width: 500px;
+		height: 400px;
+		margin-top: 0px;
+	}
+}
+
 p.normal, h1.normal, h2.normal, h3.normal,
 h4.normal, h5.normal, h6.normal {
 	font-style: normal;
