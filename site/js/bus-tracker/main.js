@@ -22,4 +22,3 @@ define(function (require) {
 	// updates the bus location for every 5 seconds
 	setInterval(require('update'), 5000); 
 });
-
