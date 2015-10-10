@@ -3,16 +3,16 @@
 
 define(['jquery'], function ($) {
 	// Coordinates of the school
-	var MX_COORDS = [42.500253, -71.370928];
+	var MX = [42.5006, -71.3694];
 	
-	// Coordinates of the bus
-	var coords = MX_COORDS;
+	// Coordinates of Dunkin' Donuts
+	var DD = [42.456378, -71.356217];
 	
 	/*function updateCoords() {
 		$.get('http://127.0.0.1:8789', function (data) {
 			coords = MX_COORDS;
 		}).fail(function () {
-			coords = MX_COORDS;
+			throw new Error();
 		});
 	}*/
 	
@@ -26,14 +26,12 @@ define(['jquery'], function ($) {
 		// Fun stuff. The bus will appear in a different latitude every 5 seconds
 		// Intended to test future functionalities
 		var lat = (Math.random() * (42500 - 42455) + 42455) / 1000;
-		coords = [lat, MX_COORDS[1]];
-		console.log("Coords updated to: " + coords);
-		return coords;
+		return [lat, MX[1]];
 	}
 	
 	return {
-		MX_COORDS: MX_COORDS,
-		update: updateCoords
+		MX: MX,
+		DD: DD,
+		updateBus: updateCoords
 	};
-	
 });

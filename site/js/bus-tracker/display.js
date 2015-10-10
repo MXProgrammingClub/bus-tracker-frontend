@@ -7,12 +7,11 @@ define(['leaflet', 'map', 'markers'], function (L, map, markers) {
 	var attribution = '<a href="https://www.mapbox.com/about/maps/">© Mapbox © OpenStreetMap</a>';
 
 	L.tileLayer(titleLayer, {
-		maxZoom: 18,
 		attribution: attribution,
 		id: 'mapbox.streets'
 	}).addTo(map);
 
-	// Adds the markers to the maps
+	// Adds the markers to the map
 	markers.mx.addTo(map);
 	markers.dd.addTo(map);
 	markers.bus.addTo(map);
