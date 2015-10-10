@@ -2,6 +2,7 @@
 
 define(function() {
 	
+	// Average earth radius at 45 degrees lat.
 	var earthRadiusMI = 3959;
 	
 	/**
@@ -15,13 +16,13 @@ define(function() {
 	}
 	
 	/**
-	 * Computes the distance between two sets of coordinates
+	 * Computes the distance between two sets of coordinates using Haversine's formula
 	 * 
 	 * @param {Number} lat1 Latitude of first coordinate
 	 * @param {Number} lon1 Longetude of first coordinate
 	 * @param {Number} lat2 Latitude of second coordinate
 	 * @param {Number} lon2 Longetude of second coordinate
-	 * @returns {Number} The distance computed, in nautical miles
+	 * @returns {Number} The distance computed, in miles
 	 */
 	function getDistance (lat1, lon1, lat2, lon2) {
 		var dlat = toRadians(lat2 - lat1);
