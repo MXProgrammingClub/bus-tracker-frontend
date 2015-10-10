@@ -8,7 +8,7 @@
 3. In the command line, type
 	* `npm install`
 	* `npm start`
-4. Then, go to `http://127.0.0.1:8080` to see the webpage, which will eventually be on the school website.
+4. Then, go to `http://127.0.0.1:3000` to see the webpage, which will eventually be on the school website.
 	
 [1]:https://nodejs.org
 
