@@ -13,18 +13,19 @@
 })();
 
 define(function (require) {
-	// makes sure jQuery loads
-	require('jquery');
-	window.jQuery = undefined;
-	
 	// inits map and icons
-	require('display'); 
-	window.L = undefined;
+	require('display');
 	
 	// updates the bus location for every 1 second
 	setInterval(require('update'), 1000); 
 	
+	// preserves jQuery module's scope
+	if (window.$) window.$.noConflict(true);
+	
 	// @testing
-	// Adds element to display distance info
+	// adds element to display distance info
 	require('distanceDisplay').insertAfter('#map');
+	
+	// module to test http requests
+	require('testing');
 });
