@@ -16,16 +16,16 @@ define(function (require) {
 	// inits map and icons
 	require('display');
 	
+	// makes sure function loads;
+	// require('update');
+
 	// updates the bus location for every 1 second
-	setInterval(require('update'), 1000); 
+	// setInterval(require('coordinates').bus, 1000); 
 	
 	// preserves jQuery module's scope
 	if (window.$) window.$.noConflict(true);
 	
 	// @testing
 	// adds element to display distance info
-	require('distanceDisplay').insertAfter('#map');
-	
-	// module to test http requests
-	require('testing');
+	// require('distanceDisplay').insertAfter('#map');\
 });

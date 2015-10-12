@@ -27,7 +27,7 @@ define(['leaflet', 'coordinates'], function (L, coordinates) {
 
 	var dd = L.marker(coordinates.DD, { icon: ddIcon });
 
-	var bus = L.marker(coordinates.updateBus(), { icon: busIcon });
+	var bus = L.marker([0, 0], { icon: busIcon });
 	
 	return {
 		mx: mx,
