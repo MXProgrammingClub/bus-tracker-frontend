@@ -17,15 +17,15 @@ define(function (require) {
 	require('display');
 	
 	// makes sure function loads;
-	// require('update');
+	require('update');
 
 	// updates the bus location for every 1 second
-	// setInterval(require('coordinates').bus, 1000); 
+	setInterval(require('coordinates').bus, 1000); 
 	
 	// preserves jQuery module's scope
 	if (window.$) window.$.noConflict(true);
 	
 	// @testing
 	// adds element to display distance info
-	// require('distanceDisplay').insertAfter('#map');\
+	require('distanceDisplay').insertAfter('#map');
 });

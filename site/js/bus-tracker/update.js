@@ -6,10 +6,10 @@ define(['jquery', 'markers', 'coordinates', 'distance'], function ($, markers, c
 		var lon = coordinates.MX[1];
 		var response = false;
 		
-		if (!arr || JSON.stringify(arr).indexOf('[') !== 0) console.log('Argument must be an array');
+		if (!arr || JSON.stringify(arr).indexOf('[') !== 0) console.error('Argument must be an array');
 		else {
 			if (typeof arr[0] !== 'number' || typeof arr[1] !== 'number') {
-				console.log('GPS Server not responding');
+				console.error('GPS Server not responding');
 			} else {
 				lat = arr[0];
 				lon = arr[1];
