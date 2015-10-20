@@ -13,6 +13,7 @@
 })();
 
 define(function (require) {
+	/* global L */
 	// inits map and icons
 	require('display');
 	
@@ -22,8 +23,11 @@ define(function (require) {
 	// updates the bus location for every 1 second
 	setInterval(require('coordinates').bus, 1000); 
 	
+	// preserves Leaflet module's scope
+	if (L) L.noConflict();
+	
 	// preserves jQuery module's scope
-	if (window.$) window.$.noConflict(true);
+	if ($) $.noConflict(true);
 	
 	// @testing
 	// adds element to display distance info
