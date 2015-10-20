@@ -1,9 +1,19 @@
 "use strict";
 
-define(['jquery', 'markers', 'coordinates', 'distance'], function ($, markers, coordinates, distance) {
+define(['jquery', 'markers', 'coordinates'], function ($, markers, coordinates) {
+
+	// Converts meters to miles
+	var metersToMiles = 1 / 1609.34;
+	
+	/**
+	 * Updates the markers on the map based on the call by the backend server
+	 *
+	 * @param {Array} arr The array of coordinates
+	 */
 	return function (arr) {
 		var lat = coordinates.MX[0];
 		var lon = coordinates.MX[1];
+		var bus = markers.bus;
 		var response = false;
 		
 		if (!arr || JSON.stringify(arr).indexOf('[') !== 0) console.error('Argument must be an array');
@@ -18,7 +28,7 @@ define(['jquery', 'markers', 'coordinates', 'distance'], function ($, markers, c
 		}
 			
 		// Sets the bus marker's position
-		markers.bus.setLatLng({
+		bus.setLatLng({
 			lat: lat, 
 			lng: lon
 		});
@@ -26,8 +36,8 @@ define(['jquery', 'markers', 'coordinates', 'distance'], function ($, markers, c
 		// @testing
 		if (response) {
 			// Displays distance info
-			var mx = Math.round(distance(lat, lon, coordinates.MX[0], coordinates.MX[1]) * 10) / 10;
-			var dd = Math.round(distance(lat, lon, coordinates.DD[0], coordinates.DD[1]) * 10) / 10;
+			var mx = Math.round(bus.distanceTo(coordinates.MX) * metersToMiles * 10) / 10;
+			var dd = Math.round(bus.distanceTo(coordinates.DD) * metersToMiles * 10) / 10;
 			$('#distanceDisplay p span:eq(0)').text(mx);
 			$('#distanceDisplay p span:eq(1)').text(dd);
 		} else {
