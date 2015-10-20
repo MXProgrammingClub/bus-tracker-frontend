@@ -1,13 +1,9 @@
 "use strict";
 
-define(['leaflet', 'map', 'markers'], function (L, map, markers) {
+define(['leaflet', 'map', 'markers', 'url'], function (L, map, markers, url) {
 	// Creates a title layer on the map
-	var token = 'pk.eyJ1IjoibWFwYm94IiwiYSI6IjZjNmRjNzk3ZmE2MTcwOTEwMGY0MzU3YjUzOWFmNWZhIn0.Y8bhBaUMqFiPrDRW9hieoQ';
-	var titleLayer = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=' + token;
-	var attribution = '<a href="https://www.mapbox.com/about/maps/">© Mapbox © OpenStreetMap</a>';
-
-	L.tileLayer(titleLayer, {
-		attribution: attribution,
+	L.tileLayer(url.titleLayer, {
+		attribution: url.attribution,
 		id: 'mapbox.streets'
 	}).addTo(map);
 
@@ -15,7 +11,4 @@ define(['leaflet', 'map', 'markers'], function (L, map, markers) {
 	markers.mx.addTo(map);
 	markers.dd.addTo(map);
 	markers.bus.addTo(map);
-	
-	// Preserves Leaflet module's scope
-	if (window.L) window.L = undefined;
 });
