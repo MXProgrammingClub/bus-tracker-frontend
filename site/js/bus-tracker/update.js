@@ -36,8 +36,8 @@ define(['jquery', 'markers', 'coordinates'], function ($, markers, coordinates) 
 		// @testing
 		if (response) {
 			// Displays distance info
-			var mx = Math.round(bus.distanceTo(coordinates.MX) * metersToMiles * 10) / 10;
-			var dd = Math.round(bus.distanceTo(coordinates.DD) * metersToMiles * 10) / 10;
+			var mx = Math.round(bus._latlng.distanceTo(coordinates.MX) * metersToMiles * 10) / 10;
+			var dd = Math.round(bus._latlng.distanceTo(coordinates.DD) * metersToMiles * 10) / 10;
 			$('#distanceDisplay p span:eq(0)').text(mx);
 			$('#distanceDisplay p span:eq(1)').text(dd);
 		} else {
