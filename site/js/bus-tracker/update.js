@@ -16,7 +16,7 @@ define(['jquery', 'markers', 'coordinates'], function ($, markers, coordinates) 
 		var bus = markers.bus;
 		var response = false;
 		
-		if (!arr || JSON.stringify(arr).indexOf('[') !== 0) console.error('Argument must be an array');
+		if (!arr || !Array.isArray(arr)) console.error('Argument must be an array');
 		else {
 			if (typeof arr[0] !== 'number' || typeof arr[1] !== 'number') {
 				console.error('GPS Server not responding');
@@ -26,13 +26,13 @@ define(['jquery', 'markers', 'coordinates'], function ($, markers, coordinates) 
 				response = true;
 			}
 		}
-			
+	
 		// Sets the bus marker's position
 		bus.setLatLng({
 			lat: lat, 
 			lng: lon
 		});
-		
+
 		// @testing
 		if (response) {
 			// Displays distance info
