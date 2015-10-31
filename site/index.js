@@ -17,7 +17,7 @@ function sendPage (response, filePath, fileContents) {
 }
 
 function serverWorking (response, absPath) {
-	fs.exists(absPath, function(exists) {
+	fs.exists(absPath, function (exists) {
 		if (exists) {
 			fs.readFile(absPath, function (e, data) {
 				if (e) send404(response);
@@ -30,11 +30,11 @@ function serverWorking (response, absPath) {
 var server = http.createServer(function (request, response) {
 	var filePath;
 	if (request.url === '/') filePath = 'index.html';
-	else if (request.url.indexOf('/bus-tracker') === 0) filePath = 'bus-tracker.html';
+	else if (request.url === '/bus-tracker' || request.url === '/bus-tracker/') filePath = 'bus-tracker.html';
 	else filePath = request.url;
 	
 	serverWorking(response, "./" + filePath);
 });
 
-server.listen(process.env.PORT || 8080);
+server.listen(8080);
 console.log("Please go to http://127.0.0.1:8080");
