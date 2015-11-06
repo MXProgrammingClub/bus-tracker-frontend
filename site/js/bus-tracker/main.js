@@ -4,8 +4,9 @@
 	require.config({
 		// defines paths for bower dependencies
 		paths: {
-			leaflet: "../bower_components/leaflet/dist/leaflet", 
-			jquery: "../bower_components/jquery/dist/jquery.min"
+			buffer: "../bower_components/buffer/buffer.min",
+			jquery: "../bower_components/jquery/dist/jquery.min",
+			leaflet: "../bower_components/leaflet/dist/leaflet"
 		},
 		// requires `define` call
 		enforceDefine: true
