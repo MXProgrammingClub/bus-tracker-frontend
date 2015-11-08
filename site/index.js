@@ -36,5 +36,5 @@ var server = http.createServer(function (request, response) {
 	serverWorking(response, "./" + filePath);
 });
 
-server.listen(8080);
+server.listen(process.env.PORT || 8080);
 console.log("Please go to http://127.0.0.1:8080");
