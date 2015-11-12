@@ -1,0 +1,15 @@
+#!/bin/sh
+
+########################
+# Starts the bus-tracker
+########################
+
+sudo killall screen
+echo "Starting in 2 seconds"
+sleep 2
+
+# Inits frontend server
+cd ~/bus-tracker-frontend && screen -d -m npm start
+
+# Inits backend MX Server
+cd ~/bus-tracker-backend/MXSERVER && screen -d -m node mxweb.js
