@@ -1,14 +1,14 @@
 # Bus-Tracker-Frontend
-> This repository will be the website frontend of the bus tracker. Everything will eventually be hosted by the school. 
+> This repository will be the website frontend of the bus tracker. Everything is on a public domain now.
 
 ----
 ### Usage
 1. The package runs on [Node.js][1]. If you do not have it installed on your computer, please download [here][1].
-2. Download or clone this repository
-3. In the command line, type
+2. Download or clone this repository.
+3. In the command line, type:
 	* `npm install`
 	* `npm start`
-4. Then, go to `http://127.0.0.1:8080` to see the webpage, which will eventually be on the school website.
+4. Then, go to `http://127.0.0.1` to see the webpage.
 	
 [1]:https://nodejs.org
 
