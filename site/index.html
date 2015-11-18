@@ -1,10 +1,22 @@
 <!DOCTYPE html>
+<html>
 <head>
-	<title>Success</title>
+	<title>Middlesex Bus Tracker</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Style for webpage -->
+	<link rel="stylesheet" href="/style/bus-tracker.css">
+	
+	<!-- Style for leaflet map -->
+	<link rel="stylesheet" href="/js/bower_components/leaflet/dist/leaflet.css">
+	
+	<!-- Script require and executes main -->
+	<script async defer data-main="/js/bus-tracker/main" src="/js/bower_components/requirejs/require.js"></script>
 </head>
 <body>
-	<h1>Hello There</h1>
-	<p>The server is up and running.</p>
-	<p>Go to <a href="bus-tracker">Bus Tracker page</a>.</p>
+	<div id="header"><h3>Middlesex Bus Tracker</h3></div>
+	<div id="map"></div>
 </body>
 </html>

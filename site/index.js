@@ -1,5 +1,10 @@
 "use strict";
 
+/**********************************
+* This platform is no longer in use
+* Replaced by Apache2 server
+**********************************/
+
 var http = require('http');
 var path = require('path');
 var fs = require('fs');
@@ -29,7 +34,7 @@ function serverWorking (response, absPath) {
 
 var server = http.createServer(function (request, response) {
 	var filePath;
-	if (request.url === '/') filePath = 'bus-tracker.html';
+	if (request.url === '/') filePath = 'index.html';
 	else filePath = request.url;
 	
 	serverWorking(response, "./" + filePath);
