@@ -29,8 +29,4 @@ define(function (require) {
 	
 	// preserves jQuery module's scope
 	if ($) $.noConflict(true);
-	
-	// @testing
-	// adds element to display distance info
-	require('distanceDisplay').insertAfter('#map');
 });
