@@ -21,4 +21,5 @@ define(['buffer', 'leaflet', 'map', 'markers', 'url'], function (buffer, L, map,
 	markers.mx.addTo(map);
 	markers.dd.addTo(map);
 	markers.bus.addTo(map);
+	markers.error.addTo(map);
 });

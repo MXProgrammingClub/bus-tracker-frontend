@@ -15,11 +15,10 @@
 
 define(function (require) {
 	/* global L */
-	// inits map and icons
+
 	require('display');
-	
-	// makes sure function loads;
 	require('update');
+	require('actions');
 
 	// updates the bus location for every 1 second
 	setInterval(require('coordinates').bus, 1000); 

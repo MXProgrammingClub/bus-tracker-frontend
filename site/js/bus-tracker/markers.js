@@ -22,16 +22,26 @@ define(['leaflet', 'coordinates'], function (L, coordinates) {
 		popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
 	});
 	
+	var errorIcon = L.icon({
+		iconUrl: '/images/no_gps.png',
+		iconSize: [200, 28], // size of the icon
+		iconAnchor: [6, 6], // point of the icon which will correspond to marker's location
+		popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+	});
+	
 
 	var mx = L.marker(coordinates.MX, { icon: mxIcon });
 
 	var dd = L.marker(coordinates.DD, { icon: ddIcon });
 
-	var bus = L.marker([0, 0], { icon: busIcon });
+	var bus = L.marker(coordinates.DEFAULT, { icon: busIcon });
+	
+	var error = L.marker(coordinates.DEFAULT, { icon: errorIcon });
 	
 	return {
 		mx: mx,
 		dd: dd, 
-		bus: bus
+		bus: bus, 
+		error: error
 	};
 });

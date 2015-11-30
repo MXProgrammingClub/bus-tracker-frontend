@@ -7,6 +7,12 @@ define(['jquery', 'url'], function ($, url) {
 	// Coordinates of Dunkin' Donuts
 	var DD = [42.456378, -71.356217];
 	
+	// Default coordinates (does not exist)
+	var DEFAULT = [-1000, -1000];
+	
+	// Error coordinates for GPS Error
+	var ERROR = [42.48, -71.377]
+	
 	function updateCoords() {
 		$('<script type="text/javascript" jsonp="true" src=' + url.server + '></script>').appendTo('body');
 		$('script[jsonp=true]').remove(); // Prevents script memory overload.
@@ -15,6 +21,8 @@ define(['jquery', 'url'], function ($, url) {
 	return {
 		MX: MX,
 		DD: DD,
+		DEFAULT: DEFAULT,
+		ERROR: ERROR,
 		bus: updateCoords
 	};
 });
