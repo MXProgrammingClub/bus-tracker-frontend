@@ -4,8 +4,8 @@ body {
 }
 
 #header {
-	height: 30%;
-	width: 30%;
+	height: 100px;
+	width: calc(4.955 * 100px);
 	margin: 0 auto;
 	/*color: #E0E0E0;
 	margin: auto;*/
@@ -15,7 +15,6 @@ body {
 	width: 720px;
 	height: 480px;
 	margin: 0 auto; /* center div */
-	margin-top: 20px;
 	margin-bottom: 15px;
 }
 
