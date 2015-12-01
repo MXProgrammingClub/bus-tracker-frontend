@@ -4,16 +4,19 @@ body {
 }
 
 #header {
-	width: 100%;
-	color: #E0E0E0;
-	margin: auto;
+	height: 30%;
+	width: 30%;
+	margin: 0 auto;
+	/*color: #E0E0E0;
+	margin: auto;*/
 }
 
 #map {
 	width: 720px;
 	height: 480px;
 	margin: 0 auto; /* center div */
-	margin-top: 50px;
+	margin-top: 20px;
+	margin-bottom: 15px;
 }
 
 /* iPhone 5/5s portrait */
@@ -23,6 +26,11 @@ body {
 		height: 400px;
 		margin-top: 0px;
 	}
+	
+	#header {
+		height: 70%;
+		width: 70%;
+	}
 }
 
 /* iPhone 5/5s landscape */
@@ -31,6 +39,11 @@ body {
 		width: auto;
 		height: 400px;
 		margin-top: 0px;
+	}
+	
+	#header {
+		height: 70%;
+		width: 70%;
 	}
 }
 
@@ -42,6 +55,11 @@ body {
 		height: 450px;
 		margin-top: 0px;
 	}
+	
+	#header {
+		height: 70%;
+		width: 70%;
+	}
 }
 
 /* iPhone 6 plus portrait */
@@ -51,8 +69,18 @@ body {
 		height: 450px;
 		margin-top: 0px;
 	}
+	
+	#header {
+		height: 70%;
+		width: 70%;
+	}
 }
 
 #distanceDisplay p {
 	color: white;
+	text-align: center;
+}
+
+#bug {
+	text-align: center;
 }
