@@ -23,6 +23,7 @@ define(['jquery', 'markers', 'coordinates'], function ($, markers, coordinates) 
 	 */
 	function refresh (res) {	
 		bus.setLatLng(res[0]); // Sets bus's location
+		bus._bringToFront(); // Makes sure marker is at the top layer
 
 		if (res[1]) {
 			setError(true);
