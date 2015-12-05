@@ -1,0 +1,40 @@
+#!/bin/sh
+
+#################################
+# Frontend apache server commands
+#################################
+
+start() {
+	sudo service apache2 start
+}
+
+stop() {
+	sudo service apache2 stop
+}
+
+restart() {
+	sudo service apache2 restart
+}
+
+copy() {
+	stop
+	sudo cp -av $HOME/bus-tracker-frontend/site/* /var/www/html
+	start
+}
+
+case "$1" in
+	start)
+		start
+		;;
+	stop)
+		stop
+		;;
+	restart)
+		restart
+		;;
+	copy)
+		copy
+		;;
+	*)
+	echo "Usage: $0 {start|stop|restart|copy}"
+esac
