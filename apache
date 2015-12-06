@@ -25,10 +25,10 @@ copy() {
 
 minify() {
 	DIR=/var/www/html/js
-	
+
 	# Minifies require.js
 	sudo uglifyjs $DIR/bower_components/requirejs/require.js -cmo require.js
-	
+
 	# Minifies JS files in bus-tracker/
 	for file in $DIR/bus-tracker/* ; do
 		sudo uglifyjs $file -cmo $file
@@ -47,6 +47,9 @@ case "$1" in
 		;;
 	copy)
 		copy
+		;;
+	minify)
+		minify
 		;;
 	*)
 	echo "Usage: $0 {start|stop|restart|copy}"
