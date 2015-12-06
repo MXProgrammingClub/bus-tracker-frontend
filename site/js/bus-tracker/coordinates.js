@@ -1,6 +1,9 @@
 "use strict";
 
-define(['jquery', 'url'], function ($, url) {
+define(['jquery', 'url', 'buffer'], function ($, url, buffer) {
+	// Encoding
+	var encoding = 'base64';
+
 	// Coordinates of the school
 	var MX = [42.5006, -71.3694];
 	
@@ -13,8 +16,8 @@ define(['jquery', 'url'], function ($, url) {
 	// Error coordinates for GPS Error
 	var ERROR = [42.48, -71.377]
 	
-	function updateCoords() {
-		$('<script type="text/javascript" jsonp="true" src=' + url.server + '></script>').appendTo('body');
+	function updateCoords () {
+		$('<script type="text/javascript" jsonp="true" src=' + new buffer.Buffer(url.server, encoding).toString() + '></script>').appendTo('body');
 		$('script[jsonp=true]').remove(); // Prevents script memory overload.
 	}
 	
