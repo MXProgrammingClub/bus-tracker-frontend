@@ -1,0 +1,40 @@
+#!/bin/sh
+
+################################
+# Frontend nginx server commands
+################################
+
+DIR=/usr/share/nginx/html
+
+start() {
+	sudo service nginx start
+}
+
+stop() {
+	sudo service nginx stop
+}
+
+reload() {
+	sudo service nginx reload
+}
+
+copy() {
+	sudo cp -av $HOME/bus-tracker-frontend/site/* $DIR
+}
+
+case "$1" in
+	start)
+		start
+		;;
+	stop)
+		stop
+		;;
+	reload)
+		reload
+		;;
+	copy)
+		copy
+		;;
+	*)
+	echo "Usage: $0 {start|stop|restart|copy}"
+esac
