@@ -71,9 +71,6 @@ define(['jquery', 'markers', 'coordinates'], function ($, markers, coordinates) 
 		if (response) error.setLatLng(coordinates.DEFAULT);
 		else {
 			error.setLatLng(coordinates.ERROR);
-			setTimeout(function () {
-				error.setLatLng(coordinates.DEFAULT);
-			}, 500);
 		}
 	}
 });
