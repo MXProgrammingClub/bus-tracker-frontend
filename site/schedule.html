@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>MX Bus Tracker</title>
+		<title>MX Bus Tracker - Schedule</title>
 
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 
 		<!-- Styles -->
+		<!--<link rel="stylesheet" href="/style/bootstrap.min.css">-->
 		<link rel="stylesheet" href="/style/bus-tracker.css">
 		<link rel="stylesheet" href="/js/bower_components/leaflet/dist/leaflet.css">
 
@@ -23,20 +24,27 @@
 			<div class="nav-wrapper mxmaroon">
 				<img class="brand-logo" src="/images/logo.png">
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
-					<li class="active"><a href="#!">Tracker</a></li>
-					<li><a href="schedule.html">Schedule</a></li>
+					<li><a href="index.html">Tracker</a></li>
+					<li class="active"><a href="#!">Schedule</a></li>
 					<li><a href="about.html">About</a></li>
 					<li><a href="https://goo.gl/forms/nAu0tKcKM3">Bug Report</a></li>
 				</ul>
 			</div>
 		</nav>
-		<br>
-		<br>
-		<div id="map"></div>
-		<br>
-		<div id="distanceDisplay">
-			<p>Distance to MX: <span>--</span> mi</p>
-			<p>Distance to DD: <span>--</span> mi</p>
+		<div class="container white-text">
+			<br><br>
+			<h2 class="header center">Bus Schedule</h2>
+			<div class="row center">
+				<div class="col s6 offset-s3">
+					<div id="schedule-box" class="light" style="text-align: justify;">
+						<p>No posted schedule for today.</p>
+					</div>
+					<p class="light white-text" style="text-align: justify;">
+						Disclaimer: This is the usual schedule; please check to make sure there is no special schedule.
+						Last updated October 14, 2016.
+					</p>
+				</div>
+			</div>
 		</div>
 		<br>
 	</body>
@@ -50,8 +58,8 @@
 				<div class="col l4 offset-l2 s12">
 					<h5 class="white-text">Links</h5>
 					<ul>
-						<li><a class="grey-text" href="#!">Home</a></li>
-						<li><a class="grey-text" href="schedule.html">Schedule</a></li>
+						<li><a class="grey-text" href="index.html">Home</a></li>
+						<li><a class="grey-text" href="#!">Schedule</a></li>
 						<li><a class="grey-text" href="about.html">About</a></li>
 						<li><a class="grey-text" href="https://goo.gl/forms/nAu0tKcKM3">File a Bug Report</a></li>
 					</ul>

@@ -1,14 +1,13 @@
 body {
-	font-family: 'Lato', sans-serif;
-	background-color: #5A1014;
+	background-color: rgb(46, 44, 45);
 }
 
-#header {
-	height: 100px;
-	width: calc(4.955 * 100px);
-	margin: 0 auto;
-	/*color: #E0E0E0;
-	margin: auto;*/
+.mxmaroon {
+	background-color: rgb(109, 0, 26) !important;
+}
+
+.brand-logo {
+	width: 25%;
 }
 
 #map {
@@ -25,11 +24,6 @@ body {
 		height: 400px;
 		margin-top: 0px;
 	}
-	
-	#header {
-		height: 70%;
-		width: 70%;
-	}
 }
 
 /* iPhone 5/5s landscape */
@@ -39,13 +33,7 @@ body {
 		height: 400px;
 		margin-top: 0px;
 	}
-	
-	#header {
-		height: 70%;
-		width: 70%;
-	}
 }
-
 
 /* iPhone 6/6s portrait */
 @media only screen and (max-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) {
@@ -53,11 +41,6 @@ body {
 		width: auto;
 		height: 450px;
 		margin-top: 0px;
-	}
-	
-	#header {
-		height: 70%;
-		width: 70%;
 	}
 }
 
@@ -68,18 +51,9 @@ body {
 		height: 450px;
 		margin-top: 0px;
 	}
-	
-	#header {
-		height: 70%;
-		width: 70%;
-	}
 }
 
 #distanceDisplay p {
 	color: white;
-	text-align: center;
-}
-
-#bug {
 	text-align: center;
 }

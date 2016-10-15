@@ -4,7 +4,8 @@
 		"jquery": "^2.1.4",
 		"requirejs": "latest",
 		"leaflet": "latest",
-		"buffer": "latest"
+		"buffer": "latest",
+		"materialize": "latest"
 	},
 	"private": true
 }
