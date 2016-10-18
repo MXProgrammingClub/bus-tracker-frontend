@@ -1,0 +1,9 @@
+{
+    "name": "js-dependencies",
+    "dependencies": {
+        "buffer": "^3.46.1",
+        "leaflet": "^1.0.1",
+		"jquery": "^2.2.4",
+		"requirejs": "^2.3.2"
+    }
+}

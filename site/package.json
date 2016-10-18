@@ -1,0 +1,11 @@
+{
+	"name": "bower-dependencies",
+	"dependencies": {
+		"bower": "1.7.9",
+		"materialize-css": "^0.97.7"
+	},
+    "scripts": {
+        "postinstall": "bower update"
+    },
+    "private": true
+}
