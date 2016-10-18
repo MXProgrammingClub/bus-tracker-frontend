@@ -13,10 +13,10 @@
 
 		<!-- Styles -->
 		<link rel="stylesheet" href="/style/bus-tracker.css">
-		<link rel="stylesheet" href="/js/bower_components/leaflet/dist/leaflet.css">
+		<link rel="stylesheet" href="/bower_components/leaflet/dist/leaflet.css">
 
 		<!-- Script require and executes main -->
-		<script async defer data-main="/js/bus-tracker/main" src="/js/bower_components/requirejs/require.js"></script>
+		<script data-main="/js/main" src="/bower_components/requirejs/require.js"></script>
 	</head>
 	<body>
 		<nav class="z-depth-0">
@@ -32,13 +32,7 @@
 		</nav>
 		<br>
 		<br>
-		<div id="map"></div>
-		<br>
-		<div id="distanceDisplay">
-			<p>Distance to MX: <span>--</span> mi</p>
-			<p>Distance to DD: <span>--</span> mi</p>
-		</div>
-		<br>
+		<div class="tab-content"></div>
 	</body>
 	<footer class="page-footer mxmaroon">
 		<div class="container">
@@ -50,9 +44,9 @@
 				<div class="col l4 offset-l2 s12">
 					<h5 class="white-text">Links</h5>
 					<ul>
-						<li><a class="grey-text" href="#!">Home</a></li>
-						<li><a class="grey-text" href="schedule.html">Schedule</a></li>
-						<li><a class="grey-text" href="about.html">About</a></li>
+						<li><a class="grey-text" toggle=".map">Home</a></li>
+						<li><a class="grey-text" toggle=".schedule">Schedule</a></li>
+						<li><a class="grey-text" toggle=".about">About</a></li>
 						<li><a class="grey-text" href="https://goo.gl/forms/nAu0tKcKM3">File a Bug Report</a></li>
 					</ul>
 				</div>
