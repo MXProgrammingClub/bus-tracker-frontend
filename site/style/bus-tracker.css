@@ -53,7 +53,15 @@ body {
 	}
 }
 
-#distanceDisplay p {
+.tab-contents {
+	display: block;
+}
+
+.tab-contents .active {
+	display: block;
+}
+
+.distance-display p {
 	color: white;
 	text-align: center;
 }
