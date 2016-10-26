@@ -21,7 +21,7 @@ define(['jquery', 'markers', 'coordinates'], function ($, markers, coordinates) 
 	 *
 	 * @param {Array} res [Coordinates, GPS Response status]
 	 */
-	function refresh (res) {	
+	function refresh (res) {
 		bus.setLatLng(res[0]); // Sets bus's location
 		bus._bringToFront(); // Makes sure marker is at the top layer
 
@@ -30,15 +30,15 @@ define(['jquery', 'markers', 'coordinates'], function ($, markers, coordinates) 
 			// Displays distance info
 			var mx = Math.round(bus._latlng.distanceTo(coordinates.MX) * metersToMiles * 10) / 10;
 			var dd = Math.round(bus._latlng.distanceTo(coordinates.DD) * metersToMiles * 10) / 10;
-			$('#distanceDisplay p span:eq(0)').text(mx);
-			$('#distanceDisplay p span:eq(1)').text(dd);
+			$('.distance-display p span:eq(0)').text(mx);
+			$('.distance-display p span:eq(1)').text(dd);
 		} else {
 			setError();
-			$('#distanceDisplay p span:eq(0)').text('--');
-			$('#distanceDisplay p span:eq(1)').text('--');
+			$('.distance-display p span:eq(0)').text('--');
+			$('.distance-display p span:eq(1)').text('--');
 		}
 	}
-	
+
 	/**
 	 * Checks validity of GPS Response
 	 *
@@ -49,7 +49,7 @@ define(['jquery', 'markers', 'coordinates'], function ($, markers, coordinates) 
 	function checkResponse (arr) {
 		var latlon = coordinates.DEFAULT;
 		var response = false;
-		
+
 		if (!arr || !Array.isArray(arr)) console.error('Argument must be an array');
 		else {
 			if (typeof arr[0] !== 'number' || typeof arr[1] !== 'number') {
@@ -61,7 +61,7 @@ define(['jquery', 'markers', 'coordinates'], function ($, markers, coordinates) 
 		}
 		return [latlon, response];
 	}
-	
+
 	/**
 	 * Sets error icon in the map
 	 *
