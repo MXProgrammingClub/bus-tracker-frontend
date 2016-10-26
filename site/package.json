@@ -2,7 +2,8 @@
 	"name": "bower-dependencies",
 	"dependencies": {
 		"bower": "1.7.9",
-		"materialize-css": "^0.97.7"
+		"materialize-css": "^0.97.7",
+		"minify": "harryxue1999/minify"
 	},
     "scripts": {
         "postinstall": "bower update"
