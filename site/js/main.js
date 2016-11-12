@@ -8,8 +8,7 @@
 			leaflet: '../bower_components/leaflet/dist/leaflet',
 			jquery: '../bower_components/jquery/dist/jquery.min',
 			materialize: '../node_modules/materialize-css/dist/js/materialize.min',
-			minify: '../node_modules/minify/minify',
-			text: '../node_modules/minify/node_modules/text/text'
+			text: '../node_modules/text/text'
 		},
 		// requires `define` call
 		enforceDefine: true
