@@ -20,8 +20,15 @@
 	<body>
 		<nav class="z-depth-0">
 			<div class="nav-wrapper mxmaroon">
-				<img class="brand-logo" src="/images/logo.png">
-				<ul class="tab-contents-toggle" id="nav-mobile" class="right hide-on-med-and-down">
+				<a href="#" data-activates="side-nav" class="button-collapse"><i class="material-icons">menu</i></a>
+				<a href=""><img class="brand-logo" src="/images/logo.png"></a>
+				<ul class="right hide-on-med-and-down tab-contents-toggle">
+					<li class="active"><a class="toggle" toggle=".map-tab">Tracker</a></li>
+					<li><a class="toggle" toggle=".schedule-tab">Schedule</a></li>
+					<li><a class="toggle" toggle=".about-tab">About</a></li>
+					<li><a href="https://goo.gl/forms/nAu0tKcKM3">Bug Report</a></li>
+				</ul>
+				<ul id="side-nav" class="side-nav">
 					<li class="active"><a class="toggle" toggle=".map-tab">Tracker</a></li>
 					<li><a class="toggle" toggle=".schedule-tab">Schedule</a></li>
 					<li><a class="toggle" toggle=".about-tab">About</a></li>
