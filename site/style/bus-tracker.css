@@ -6,8 +6,8 @@ body {
 	background-color: rgb(109, 0, 26) !important;
 }
 
-.brand-logo {
-	width: 25%;
+.brand-logo, .brand-logo-a {
+	height: inherit;
 }
 
 a {
