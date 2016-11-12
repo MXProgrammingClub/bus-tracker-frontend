@@ -2,7 +2,7 @@
 	"name": "bower-dependencies",
 	"dependencies": {
 		"bower": "1.7.9",
-		"materialize-css": "^0.97.7",
+		"materialize-css": "^0.97.8",
 		"text": "requirejs/text"
 	},
     "scripts": {
