@@ -1,6 +1,6 @@
 "use strict";
 
-define(['buffer', 'leaflet', 'map', 'markers', 'url'], function (buffer, L, map, markers, url) {
+define(['buffer', 'leaflet', 'markers', 'url'], function (buffer, L, markers, url) {
 
 	// Map config
 	var config = {
@@ -22,7 +22,7 @@ define(['buffer', 'leaflet', 'map', 'markers', 'url'], function (buffer, L, map,
 	return {
 		init: function () {
 
-			map = new L.Map('map', config);
+			var map = new L.Map('map', config);
 
 			// Disable drag and zoom handlers
 			map.dragging.disable();
@@ -44,6 +44,11 @@ define(['buffer', 'leaflet', 'map', 'markers', 'url'], function (buffer, L, map,
 			markers.dd.addTo(map);
 			markers.bus.addTo(map);
 			markers.error.addTo(map);
+
+			define('map', [], function () {
+				return map;
+			});
+
 		}
 	}
 });

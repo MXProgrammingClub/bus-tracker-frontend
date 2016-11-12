@@ -21,6 +21,7 @@ define(['coordinates', 'display', 'ui', 'update', 'schedule'], function (coordin
 
 	// initializes map display
 	display.init();
+	require(['map']);
 
 	// updates the bus location for every 1 second
 	setInterval(coordinates.bus, 1000);
