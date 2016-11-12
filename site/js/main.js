@@ -8,14 +8,19 @@
 			leaflet: '../bower_components/leaflet/dist/leaflet',
 			jquery: '../bower_components/jquery/dist/jquery.min',
 			materialize: '../node_modules/materialize-css/dist/js/materialize.min',
+			hammerjs: '../node_modules/materialize-css/node_modules/hammerjs/hammer.min',
 			text: '../node_modules/text/text'
 		},
-		// requires `define` call
-		enforceDefine: true
+		shim: {
+			materialize: {
+				deps: ['jquery', 'hammerjs']
+			}
+		}
 	});
 })();
 
-define(['coordinates', 'display', 'ui', 'update', 'schedule'], function (coordinates, display) {
+define(['coordinates', 'display', 'materialize', 'ui', 'update', 'schedule'], function (coordinates, display) {
+	// FIXME materialize.js is not compatible with amd
 	/* global L */
 
 	// initializes map display

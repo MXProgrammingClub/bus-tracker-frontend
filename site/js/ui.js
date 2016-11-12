@@ -1,8 +1,8 @@
 'use strict';
 
-define(['jquery', 'tab-contents/main', "materialize"], function ($, tabHTML) {
+define(['jquery', 'tab-contents/main'], function ($, tabHTML) {
     // initializes the side nav
-    $(".button-collapse").sideNav();
+    // $(".button-collapse").sideNav();
 
     var $container = $('div.tab-contents');
     $(tabHTML).appendTo($container);
@@ -17,7 +17,7 @@ define(['jquery', 'tab-contents/main', "materialize"], function ($, tabHTML) {
         var $this = $('.tab-contents-toggle').find('.' + c).children();
 
         // The tab that the user clicks on
-        var $that = $('.tab-contents-toggle').find(`.toggle[toggle="${$(this).attr('toggle')}"]`);
+        var $that = $('.tab-contents-toggle').find('.toggle[toggle="' + $(this).attr('toggle') + '"]');
 
         // Current active content
         var $current = $container.find($this.attr('toggle'));
